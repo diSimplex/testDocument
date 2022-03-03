@@ -1,0 +1,26 @@
+# This is a YAML description of the test document.
+
+projects:
+  testDoc:
+
+    description: |
+      This ConTeXt project has one primary goal:
+      \n
+      1. Test the ability of computePods to typeset ConTeXt documents
+
+    targets:
+      document:
+        help: Typeset the test document (pdf version)
+
+        dependencies:
+          - test.tex
+        outputs:
+          - test.pdf
+
+      html:
+        help: Typeset the test document (html version)
+
+        dependencies:
+          - test.tex
+        outputs:
+          - test.html
