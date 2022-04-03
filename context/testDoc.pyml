@@ -9,6 +9,16 @@ projects:
       1. Test the ability of computePods to typeset ConTeXt documents
 
     targets:
+
+      defaults:
+        uses:
+          - literateProgramming
+          - conTests
+          - commDiag
+          - diSimp
+        outputDir:
+          - somewhere
+
       document:
         help: Typeset the test document (pdf version)
 
@@ -16,11 +26,13 @@ projects:
           - test.tex
         outputs:
           - test.pdf
+        worker: context
 
       html:
         help: Typeset the test document (html version)
 
         dependencies:
-          - test.tex
+          - test.pdf
         outputs:
           - test.html
+        worker: pdf2html
