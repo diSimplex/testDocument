@@ -1,7 +1,7 @@
 # This is a YAML description of the test document.
 
 projects:
-  testDoc:
+  testLatexDoc:
 
     description: |
       This LaTeX project has one primary goal:
